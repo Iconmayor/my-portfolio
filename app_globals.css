@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Increased to account for the fixed header */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-semibold py-2 px-4 rounded-full transition duration-300;
+  }
+  .btn-primary {
+    @apply bg-yellow-500 text-black hover:bg-black hover:text-white dark:bg-yellow-600 dark:text-white dark:hover:bg-yellow-500 dark:hover:text-black;
+  }
+  .btn-secondary {
+    @apply bg-white text-black border border-black hover:bg-yellow-500 dark:bg-gray-800 dark:text-white dark:border-white dark:hover:bg-yellow-600;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
